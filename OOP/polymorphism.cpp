@@ -78,6 +78,16 @@ public:
 };
 
 int main() {
+
+    /**
+    Employee is an abstract base class (it has a pure virtual function Work()).
+    Developer and Teacher inherit from Employee and override Work().
+    When you store &d or &t (addresses of derived objects) in an Employee*,
+    you’re saying: “Treat this Developer/Teacher as a generic Employee, but still remember its real type.”
+    That’s why e1->Work() automatically calls the correct overridden version — even though e1 is a pointer to Employee.
+     */
+
+
     Developer d("Francisco", "UFC", 21, "C++");
     Teacher t("Alice", "High School", 35, "Math");
 
